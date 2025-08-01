@@ -1,136 +1,69 @@
 <!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moderen Bicycle</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moderen Bicycle - Investasi Sepeda Listrik</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background: #1e293b;
-      color: white;
-      padding: 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    .hero {
-      background: #f3f4f6;
-      padding: 50px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2em;
-    }
-    .button {
-      background: #10b981;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    section {
-      padding: 40px;
-    }
-    .vip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      border: 1px solid #d1d5db;
-      padding: 20px;
-      border-radius: 12px;
-      background: #ffffff;
-    }
-    .form-input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+    header, footer { background: #0d47a1; color: white; padding: 20px; text-align: center; }
+    nav { background: #1976d2; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .hero { background: #2196f3; color: white; padding: 40px 20px; text-align: center; }
+    .hero button { background: #fff; color: #2196f3; border: none; padding: 15px 25px; font-size: 16px; cursor: pointer; }
+    .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .vip-card { background: white; border-radius: 8px; padding: 20px; margin: 10px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .vip-card h3 { margin: 0 0 10px; }
+    .cs { background: white; padding: 20px; border-radius: 8px; margin-top: 20px; }
+    footer p { margin: 5px 0; }
   </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <div><strong>Moderen Bicycle</strong></div>
-      <div>
-        <a href="#hero">Beranda</a>
-        <a href="#vip">VIP</a>
-        <a href="#simulasi">Simulasi</a>
-        <a href="#tentang">Tentang Kami</a>
-        <a href="#kontak">Kontak</a>
-        <a href="#login">Login</a>
-      </div>
-    </nav>
-  </header>  <section class="hero" id="hero">
-    <h1>Investasi Sepeda Listrik Masa Depan</h1>
-    <p>Mulai dari Rp75.000 - Dapatkan Profit Harian Tanpa Risiko Tersembunyi</p>
-    <button class="button" onclick="document.getElementById('vip').scrollIntoView({behavior: 'smooth'})">Gabung Sekarang</button>
-  </section>  <section id="vip">
-    <h2>Paket VIP</h2>
-    <div class="vip">
-      <div class="card"><h3>VIP Pemula</h3><p>Investasi: Rp75.000<br>Profit: Rp10.000/hari<br>Durasi: 15 hari<br>Total Profit: Rp150.000<br>Untung Bersih: Rp75.000</p></div>
-      <div class="card"><h3>VIP 1</h3><p>Rp100.000 | Rp15.000/hari | 20 hari | Rp300.000 | Untung Rp200.000</p></div>
-      <div class="card"><h3>VIP 2</h3><p>Rp200.000 | Rp25.000/hari | 20 hari | Rp500.000 | Untung Rp300.000</p></div>
-      <div class="card"><h3>VIP 3</h3><p>Rp300.000 | Rp35.000/hari | 20 hari | Rp700.000 | Untung Rp400.000</p></div>
-      <div class="card"><h3>VIP 4</h3><p>Rp500.000 | Rp50.000/hari | 20 hari | Rp1.000.000 | Untung Rp500.000</p></div>
-      <div class="card"><h3>VIP 5</h3><p>Rp750.000 | Rp75.000/hari | 20 hari | Rp1.500.000 | Untung Rp750.000</p></div>
-      <div class="card"><h3>VIP 6</h3><p>Rp1.000.000 | Rp110.000/hari | 30 hari | Rp3.300.000 | Untung Rp2.300.000</p></div>
-      <div class="card"><h3>VIP 7</h3><p>Rp1.500.000 | Rp160.000/hari | 30 hari | Rp4.800.000 | Untung Rp3.300.000</p></div>
-      <div class="card"><h3>VIP 8</h3><p>Rp2.000.000 | Rp220.000/hari | 30 hari | Rp6.600.000 | Untung Rp4.600.000</p></div>
-      <div class="card"><h3>VIP 9</h3><p>Rp3.000.000 | Rp300.000/hari | 30 hari | Rp9.000.000 | Untung Rp6.000.000</p></div>
-      <div class="card"><h3>VIP 10</h3><p>Rp5.000.000 | Rp500.000/hari | 30 hari | Rp15.000.000 | Untung Rp10.000.000</p></div>
-    </div>
-  </section>  <section id="simulasi">
-    <h2>Simulasi Profit</h2>
-    <p>Masukkan jumlah investasi Anda untuk melihat estimasi keuntungan:</p>
-    <input class="form-input" type="number" id="jumlah" placeholder="Masukkan jumlah investasi (mis. 100000)">
-    <button class="button" onclick="hitungProfit()">Hitung</button>
-    <p id="hasil"></p>
-  </section>  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>Moderen Bicycle adalah platform investasi sepeda listrik yang memberikan profit harian berdasarkan jumlah dan paket VIP yang Anda pilih. Kami menjamin transparansi penuh dan memberikan opsi risiko yang bisa dipantau secara real-time oleh pengguna.</p>
-  </section>  <section id="kontak">
-    <h2>Kontak Kami</h2>
-    <p>Customer Service (Telegram): <a href="https://t.me/csmoderenbicycle" target="_blank">@csmoderenbicycle</a></p>
-    <p>Grup Diskusi Resmi: <a href="https://t.me/moderenbicyclegroup" target="_blank">@moderenbicyclegroup</a></p>
-  </section>  <footer>
-    <p>&copy; 2025 Moderen Bicycle. All rights reserved.</p>
-    <p><a href="#hero">Beranda</a> | <a href="#vip">VIP</a> | <a href="#tentang">Tentang Kami</a> | <a href="#kontak">Kontak</a></p>
-  </footer>  <script>
-    function hitungProfit() {
-      const jumlah = parseInt(document.getElementById('jumlah').value);
-      let profit = 0;
-      if (jumlah === 75000) profit = 10000 * 15;
-      else if (jumlah === 100000) profit = 15000 * 20;
-      else if (jumlah === 200000) profit = 25000 * 20;
-      else if (jumlah === 300000) profit = 35000 * 20;
-      else if (jumlah === 500000) profit = 50000 * 20;
-      else if (jumlah === 750000) profit = 75000 * 20;
-      else if (jumlah === 1000000) profit = 110000 * 30;
-      else if (jumlah === 1500000) profit = 160000 * 30;
-      else if (jumlah === 2000000) profit = 220000 * 30;
-      else if (jumlah === 3000000) profit = 300000 * 30;
-      else if (jumlah === 5000000) profit = 500000 * 30;
-      else profit = jumlah * 0.2; // default simulasi
-      document.getElementById('hasil').innerText = `Estimasi Total Profit: Rp${profit.toLocaleString()}`;
-    }
-  </script></body>
+<body><header>
+  <h1>Moderen Bicycle</h1>
+  <p>Investasi sepeda listrik terpercaya dan transparan</p>
+</header><nav>
+  <a href="#vip">Paket VIP</a>
+  <a href="#ketentuan">Ketentuan</a>
+  <a href="#cs">Customer Service</a>
+  <a href="#tentang">Tentang Kami</a>
+</nav><section class="hero">
+  <h2>Gabung Sekarang dan Dapatkan Profit Harian!</h2>
+  <p>Mulai investasi hanya dari Rp75.000</p>
+  <a href="login.html"><button>Gabung Sekarang</button></a>
+</section><section class="section" id="vip">
+  <h2>Paket VIP</h2>
+  <div class="vip-card"><h3>VIP Pemula</h3><p>Rp75.000 - Profit Rp10.000/hari - 15 hari</p></div>
+  <div class="vip-card"><h3>VIP 1</h3><p>Rp100.000 - Profit Rp15.000/hari - 20 hari</p></div>
+  <div class="vip-card"><h3>VIP 2</h3><p>Rp200.000 - Profit Rp25.000/hari - 20 hari</p></div>
+  <div class="vip-card"><h3>VIP 3</h3><p>Rp300.000 - Profit Rp35.000/hari - 20 hari</p></div>
+  <div class="vip-card"><h3>VIP 4</h3><p>Rp500.000 - Profit Rp50.000/hari - 20 hari</p></div>
+  <div class="vip-card"><h3>VIP 5</h3><p>Rp750.000 - Profit Rp75.000/hari - 20 hari</p></div>
+  <div class="vip-card"><h3>VIP 6</h3><p>Rp1.000.000 - Profit Rp110.000/hari - 30 hari</p></div>
+  <div class="vip-card"><h3>VIP 7</h3><p>Rp1.500.000 - Profit Rp160.000/hari - 30 hari</p></div>
+  <div class="vip-card"><h3>VIP 8</h3><p>Rp2.000.000 - Profit Rp220.000/hari - 30 hari</p></div>
+  <div class="vip-card"><h3>VIP 9</h3><p>Rp3.000.000 - Profit Rp300.000/hari - 30 hari</p></div>
+  <div class="vip-card"><h3>VIP 10</h3><p>Rp5.000.000 - Profit Rp500.000/hari - 30 hari</p></div>
+</section><section class="section" id="ketentuan">
+  <h2>Syarat & Ketentuan</h2>
+  <ul>
+    <li>Minimal withdraw Rp50.000</li>
+    <li>Fee penarikan 10%</li>
+    <li>Saldo dapat ditarik kapan saja, tidak di-lock</li>
+    <li>Admin berhak memberikan risiko kerugian mulai 5% - 90%</li>
+    <li>Semakin tinggi risiko, tampilan investasi akan ditandai merah</li>
+    <li>Sistem referral: 20% (L1), 10% (L2), 5% (L3)</li>
+  </ul>
+</section><section class="section" id="cs">
+  <h2>Customer Service</h2>
+  <div class="cs">
+    <p>Hubungi CS kami melalui Telegram:</p>
+    <p><strong>@Moderenbicycle</strong></p>
+    <p>Gabung grup resmi: <a href="https://t.me/+SBBD5EefTGBhMzBl">Klik di sini</a></p>
+  </div>
+</section><section class="section" id="tentang">
+  <h2>Tentang Kami</h2>
+  <p>Moderen Bicycle adalah platform investasi sepeda listrik yang aman, transparan, dan memberikan penghasilan harian bagi para mitra investor. Kami percaya pada sistem keterbukaan, kontrol risiko manual oleh admin, dan komunitas aktif melalui Telegram.</p>
+</section><footer>
+  <p>&copy; 2025 Moderen Bicycle. All rights reserved.</p>
+  <p><a href="#" style="color:white">Kebijakan Privasi</a> | <a href="#" style="color:white">Syarat Layanan</a></p>
+</footer></body>
 </html>
