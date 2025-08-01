@@ -2,139 +2,216 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moderen Bicycle - Investasi Sepeda Listrik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moderen Bicycle</title>
   <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: sans-serif;
+    }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f8f8f8;
+      color: #333;
     }
     header {
-      background-color: #222;
+      background: #2e3a59;
       color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background-color: #333;
+      padding: 16px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      justify-content: center;
+    }
+    header h1 {
+      font-size: 24px;
     }
     nav a {
+      margin: 0 10px;
       color: white;
-      padding: 1rem;
       text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #555;
-    }
-    section {
-      padding: 2rem;
+      font-weight: bold;
     }
     .hero {
-      background: linear-gradient(to right, #3f87a6, #ebf8e1);
-      padding: 4rem 2rem;
+      background: #e0f0ff;
+      padding: 40px 20px;
       text-align: center;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
     }
     .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
-    .hero a {
-      padding: 1rem 2rem;
-      background: #28a745;
+    .hero button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #2e3a59;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .vip-card {
+    section {
+      padding: 40px 20px;
+    }
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
       background: white;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     footer {
-      background-color: #222;
-      color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 20px;
+      background: #2e3a59;
+      color: white;
+      margin-top: 40px;
     }
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background: #2e3a59;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h2>Logo Moderen Bicycle</h2>
+  <h1>Moderen Bicycle</h1>
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#vip">VIP</a>
+    <a href="#simulasi">Simulasi</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#login">Login</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#beranda">Beranda</a>
-  <a href="#vip">VIP</a>
-  <a href="#simulasi">Simulasi</a>
-  <a href="#tentang">Tentang Kami</a>
-  <a href="#kontak">Kontak</a>
-  <a href="#login">Login</a>
-</nav>
+<div id="beranda" class="hero">
+  <h2>Investasi Aman & Transparan</h2>
+  <p>Moderen Bicycle adalah proyek investasi sepeda listrik masa depan</p>
+  <button onclick="location.href='#login'">Gabung Sekarang</button>
+</div>
 
-<section id="beranda" class="hero">
-  <h1>Moderen Bicycle</h1>
-  <p>Investasi aman & transparan pada proyek sepeda listrik masa depan</p>
-  <a href="#vip">Gabung Sekarang</a>
+<section id="keunggulan">
+  <h3 class="section-title">Keunggulan Kami</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Profit Harian</h4>
+      <p>Dapatkan keuntungan harian hingga Rp500.000.</p>
+    </div>
+    <div class="card">
+      <h4>Referral</h4>
+      <p>Dapatkan bonus 20% saat ajak teman investasi.</p>
+    </div>
+    <div class="card">
+      <h4>Transparan</h4>
+      <p>Semua risiko dan keuntungan ditampilkan secara terbuka.</p>
+    </div>
+  </div>
 </section>
 
 <section id="vip">
-  <h2>Paket VIP</h2>
-  <div class="vip-card"><strong>VIP Pemula</strong> — Rp75.000 - Profit Rp10.000/hari - 15 hari</div>
-  <div class="vip-card"><strong>VIP 1</strong> — Rp100.000 - Profit Rp15.000/hari - 20 hari</div>
-  <div class="vip-card"><strong>VIP 2</strong> — Rp200.000 - Profit Rp25.000/hari - 20 hari</div>
-  <div class="vip-card"><strong>VIP 3</strong> — Rp300.000 - Profit Rp35.000/hari - 20 hari</div>
-  <div class="vip-card"><strong>VIP 4</strong> — Rp500.000 - Profit Rp50.000/hari - 20 hari</div>
-  <div class="vip-card"><strong>VIP 5</strong> — Rp750.000 - Profit Rp75.000/hari - 20 hari</div>
-  <div class="vip-card"><strong>VIP 6</strong> — Rp1.000.000 - Profit Rp110.000/hari - 30 hari</div>
-  <div class="vip-card"><strong>VIP 7</strong> — Rp1.500.000 - Profit Rp160.000/hari - 30 hari</div>
-  <div class="vip-card"><strong>VIP 8</strong> — Rp2.000.000 - Profit Rp220.000/hari - 30 hari</div>
-  <div class="vip-card"><strong>VIP 9</strong> — Rp3.000.000 - Profit Rp300.000/hari - 30 hari</div>
-  <div class="vip-card"><strong>VIP 10</strong> — Rp5.000.000 - Profit Rp500.000/hari - 30 hari</div>
+  <h3 class="section-title">Paket VIP</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>VIP Pemula</h4>
+      <p>Rp75.000 - Profit Rp10.000/hari - 15 hari</p>
+    </div>
+    <div class="card">
+      <h4>VIP 1</h4>
+      <p>Rp100.000 - Profit Rp15.000/hari - 20 hari</p>
+    </div>
+    <div class="card">
+      <h4>VIP 10</h4>
+      <p>Rp5.000.000 - Profit Rp500.000/hari - 30 hari</p>
+    </div>
+  </div>
 </section>
 
 <section id="simulasi">
-  <h2>Simulasi Investasi</h2>
-  <p>Fitur ini akan hadir untuk menghitung potensi profit kamu secara otomatis.</p>
+  <h3 class="section-title">Simulasi Investasi</h3>
+  <div class="form-container">
+    <label for="jumlah">Jumlah Investasi (Rp):</label>
+    <input type="text" id="jumlah" placeholder="Contoh: 100000">
+    <label for="hari">Jumlah Hari:</label>
+    <input type="text" id="hari" placeholder="Contoh: 20">
+    <input type="submit" value="Hitung Profit" onclick="hitungProfit()">
+    <p id="hasil"></p>
+  </div>
 </section>
 
 <section id="tentang">
-  <h2>Tentang Kami</h2>
-  <p>Moderen Bicycle adalah platform investasi digital yang berfokus pada proyek sepeda listrik. Kami menyediakan sistem VIP, profit harian, dan sistem referral yang adil serta transparan. Semua risiko investasi dapat ditinjau secara terbuka, dan kami berkomitmen menjaga kepercayaan investor.</p>
+  <h3 class="section-title">Tentang Kami</h3>
+  <p style="max-width: 600px; margin: auto; text-align: center;">
+    Moderen Bicycle adalah platform investasi berbasis proyek sepeda listrik dengan sistem VIP, referral, dan transparansi risiko. Kami hadir untuk memudahkan masyarakat berinvestasi secara aman dan fleksibel.
+  </p>
 </section>
 
 <section id="kontak">
-  <h2>Kontak</h2>
-  <p>Customer service kami aktif via <a href="https://t.me/usernameCS" target="_blank">Telegram</a> setiap hari pukul 08.00 - 22.00 WIB.</p>
+  <h3 class="section-title">Kontak</h3>
+  <p style="text-align: center;">Hubungi kami melalui Telegram: @modbikecs</p>
 </section>
 
 <section id="login">
-  <h2>Login</h2>
-  <p>Fitur login pengguna akan tersedia pada pembaruan berikutnya. Mohon tunggu ya!</p>
+  <h3 class="section-title">Login</h3>
+  <div class="form-container">
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <input type="submit" value="Masuk">
+    </form>
+  </div>
 </section>
 
 <footer>
-  © 2025 Moderen Bicycle. Semua hak dilindungi.
+  &copy; 2025 Moderen Bicycle. All rights reserved.
 </footer>
+
+<script>
+  function hitungProfit() {
+    let jumlah = parseInt(document.getElementById("jumlah").value);
+    let hari = parseInt(document.getElementById("hari").value);
+    if (isNaN(jumlah) || isNaN(hari)) {
+      document.getElementById("hasil").innerText = "Masukkan angka yang valid.";
+    } else {
+      let profit = jumlah * 0.15 * hari / 20;
+      document.getElementById("hasil").innerText = `Estimasi profit: Rp${profit.toLocaleString()}`;
+    }
+  }
+</script>
 
 </body>
 </html>
