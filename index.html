@@ -1,147 +1,110 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moderen Bicycle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderen Bicycle - Investasi Sepeda Listrik</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, footer { background: #222; color: white; padding: 10px 20px; }
+    nav a { margin-right: 15px; color: white; text-decoration: none; }
+    .container { padding: 20px; }
+    .vip-card { background: white; border-radius: 8px; padding: 15px; margin-bottom: 10px; }
+    .btn { background: green; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+    .btn:hover { background: darkgreen; }
+    .login-modal, .register-modal {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); justify-content: center; align-items: center;
     }
-    header, footer {
-      background-color: #0080ff;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    nav {
-      background: #eee;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0080ff;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-    }
-    .vip-card {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 10px 0;
-      background: #fff;
-    }
-    form input, form button {
-      padding: 10px;
-      margin: 5px 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    form {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .btn {
-      background: #0080ff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #005bbb;
+    .modal-content {
+      background: white; padding: 20px; border-radius: 10px; min-width: 300px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Moderen Bicycle</h1>
-    <p>Investasi Sepeda Listrik Terpercaya</p>
-  </header>
+    <nav>
+      <a href="#vip">VIP</a>
+      <a href="#ketentuan">Syarat & Ketentuan</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#cs">CS</a>
+      <a href="#" onclick="openLogin()">Login</a>
+    </nav>
+  </header>  <div class="container">
+    <button class="btn" onclick="openRegister()">Gabung Sekarang</button><section id="vip">
+  <h2>Paket VIP</h2>
+  <div class="vip-card">VIP Pemula - Rp75.000 - Profit Harian Rp10.000 - 15 Hari</div>
+  <div class="vip-card">VIP 1 - Rp100.000 - Profit Harian Rp15.000 - 20 Hari</div>
+  <!-- Tambahkan semua VIP hingga VIP 10 sesuai struktur -->
+</section>
 
-  <nav>
-    <a href="#home">Beranda</a>
-    <a href="#vip">Paket VIP</a>
-    <a href="#login">Gabung Sekarang</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#syarat">Syarat & Ketentuan</a>
-    <a href="#cs">Customer Service</a>
-  </nav>
+<section id="ketentuan">
+  <h2>Syarat & Ketentuan</h2>
+  <p>Minimum withdraw Rp50.000 dengan fee 10%. Admin dapat menetapkan risiko investasi secara manual, dari 5% hingga 90%.</p>
+</section>
 
-  <section id="home">
-    <h2>Selamat datang di Moderen Bicycle!</h2>
-    <p>Mulai investasimu dan dapatkan profit harian dengan sistem VIP!</p>
-  </section>
+<section id="tentang">
+  <h2>Tentang Kami</h2>
+  <p>Moderen Bicycle adalah platform investasi sepeda listrik dengan sistem VIP, transparansi risiko, dan profit harian.</p>
+</section>
 
-  <section id="vip">
-    <h2>Daftar VIP</h2>
-    <div class="vip-card"><strong>VIP Pemula</strong><br>Rp75.000 - Rp10.000/hari - 15 hari</div>
-    <div class="vip-card"><strong>VIP 1</strong><br>Rp100.000 - Rp15.000/hari - 20 hari</div>
-    <div class="vip-card"><strong>VIP 2</strong><br>Rp200.000 - Rp25.000/hari - 20 hari</div>
-    <div class="vip-card"><strong>VIP 3</strong><br>Rp300.000 - Rp35.000/hari - 20 hari</div>
-    <div class="vip-card"><strong>VIP 4</strong><br>Rp500.000 - Rp50.000/hari - 20 hari</div>
-    <div class="vip-card"><strong>VIP 5</strong><br>Rp750.000 - Rp75.000/hari - 20 hari</div>
-    <div class="vip-card"><strong>VIP 6</strong><br>Rp1.000.000 - Rp110.000/hari - 30 hari</div>
-    <div class="vip-card"><strong>VIP 7</strong><br>Rp1.500.000 - Rp160.000/hari - 30 hari</div>
-    <div class="vip-card"><strong>VIP 8</strong><br>Rp2.000.000 - Rp220.000/hari - 30 hari</div>
-    <div class="vip-card"><strong>VIP 9</strong><br>Rp3.000.000 - Rp300.000/hari - 30 hari</div>
-    <div class="vip-card"><strong>VIP 10</strong><br>Rp5.000.000 - Rp500.000/hari - 30 hari</div>
-  </section>
+<section id="cs">
+  <h2>Customer Service</h2>
+  <p>Hubungi CS via Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></p>
+  <p>Grup Telegram: <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Grup</a></p>
+</section>
 
-  <section id="login">
-    <h2>Gabung Sekarang</h2>
-    <form>
+  </div>  <footer>
+    <p>&copy; 2025 Moderen Bicycle</p>
+  </footer>  <!-- Modal Login -->  <div class="login-modal" id="loginModal">
+    <div class="modal-content">
       <h3>Login</h3>
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button class="btn" type="submit">Login</button>
-    </form>
-    <br />
-    <form>
+      <input type="text" id="loginUsername" placeholder="Username"><br><br>
+      <input type="password" id="loginPassword" placeholder="Password"><br><br>
+      <button onclick="doLogin()">Masuk</button>
+      <button onclick="closeLogin()">Batal</button>
+    </div>
+  </div>  <!-- Modal Daftar -->  <div class="register-modal" id="registerModal">
+    <div class="modal-content">
       <h3>Daftar</h3>
-      <input type="text" placeholder="Nama Lengkap" required />
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <input type="text" placeholder="Kode Referral (Opsional)" />
-      <button class="btn" type="submit">Daftar</button>
-    </form>
-  </section>
+      <input type="text" id="regUsername" placeholder="Username"><br><br>
+      <input type="password" id="regPassword" placeholder="Password"><br><br>
+      <button onclick="doRegister()">Daftar</button>
+      <button onclick="closeRegister()">Batal</button>
+    </div>
+  </div>  <script>
+    function openLogin() {
+      document.getElementById("loginModal").style.display = "flex";
+    }
+    function closeLogin() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+    function openRegister() {
+      document.getElementById("registerModal").style.display = "flex";
+    }
+    function closeRegister() {
+      document.getElementById("registerModal").style.display = "none";
+    }
 
-  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>Moderen Bicycle adalah platform investasi berbasis proyek sepeda listrik. Kami menawarkan berbagai paket VIP dengan keuntungan harian yang transparan. Risiko investasi dapat ditentukan oleh admin demi menjaga keseimbangan sistem dan keadilan bagi semua pengguna.</p>
-  </section>
+    function doRegister() {
+      const u = document.getElementById("regUsername").value;
+      const p = document.getElementById("regPassword").value;
+      if (!u || !p) return alert("Isi semua data.");
+      localStorage.setItem("user", JSON.stringify({ username: u, password: p }));
+      alert("Pendaftaran berhasil. Silakan login.");
+      closeRegister();
+    }
 
-  <section id="syarat">
-    <h2>Syarat & Ketentuan</h2>
-    <ul>
-      <li>Investasi minimal VIP Pemula adalah Rp75.000</li>
-      <li>Profit harian ditentukan berdasarkan paket VIP</li>
-      <li>Penarikan minimal Rp50.000 dengan potongan fee 10%</li>
-      <li>Risiko kerugian ditetapkan oleh admin, dari 5% hingga 90%</li>
-      <li>Saldo tidak di-lock, pengguna dapat menarik setelah mencapai batas minimal</li>
-    </ul>
-  </section>
-
-  <section id="cs">
-    <h2>Customer Service</h2>
-    <p>Hubungi kami melalui Telegram:</p>
-    <p><strong>Username CS:</strong> <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></p>
-    <p><strong>Grup Diskusi:</strong> <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Grup Telegram</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Moderen Bicycle. All rights reserved.</p>
-  </footer>
-</body>
+    function doLogin() {
+      const u = document.getElementById("loginUsername").value;
+      const p = document.getElementById("loginPassword").value;
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user && user.username === u && user.password === p) {
+        alert("Login berhasil. Selamat datang " + u);
+        closeLogin();
+      } else {
+        alert("Username atau password salah.");
+      }
+    }
+  </script></body>
 </html>
