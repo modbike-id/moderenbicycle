@@ -1,110 +1,138 @@
 <!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moderen Bicycle - Investasi Sepeda Listrik</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header, footer { background: #222; color: white; padding: 10px 20px; }
-    nav a { margin-right: 15px; color: white; text-decoration: none; }
-    .container { padding: 20px; }
-    .vip-card { background: white; border-radius: 8px; padding: 15px; margin-bottom: 10px; }
-    .btn { background: green; color: white; padding: 10px 15px; border: none; cursor: pointer; }
-    .btn:hover { background: darkgreen; }
-    .login-modal, .register-modal {
-      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6); justify-content: center; align-items: center;
+    body {
+      padding-top: 56px;
     }
-    .modal-content {
-      background: white; padding: 20px; border-radius: 10px; min-width: 300px;
+    .vip-card {
+      margin-bottom: 20px;
+    }
+    .nav-link {
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Moderen Bicycle</h1>
-    <nav>
-      <a href="#vip">VIP</a>
-      <a href="#ketentuan">Syarat & Ketentuan</a>
-      <a href="#tentang">Tentang Kami</a>
-      <a href="#cs">CS</a>
-      <a href="#" onclick="openLogin()">Login</a>
-    </nav>
-  </header>  <div class="container">
-    <button class="btn" onclick="openRegister()">Gabung Sekarang</button><section id="vip">
-  <h2>Paket VIP</h2>
-  <div class="vip-card">VIP Pemula - Rp75.000 - Profit Harian Rp10.000 - 15 Hari</div>
-  <div class="vip-card">VIP 1 - Rp100.000 - Profit Harian Rp15.000 - 20 Hari</div>
-  <!-- Tambahkan semua VIP hingga VIP 10 sesuai struktur -->
-</section>
-
-<section id="ketentuan">
-  <h2>Syarat & Ketentuan</h2>
-  <p>Minimum withdraw Rp50.000 dengan fee 10%. Admin dapat menetapkan risiko investasi secara manual, dari 5% hingga 90%.</p>
-</section>
-
-<section id="tentang">
-  <h2>Tentang Kami</h2>
-  <p>Moderen Bicycle adalah platform investasi sepeda listrik dengan sistem VIP, transparansi risiko, dan profit harian.</p>
-</section>
-
-<section id="cs">
-  <h2>Customer Service</h2>
-  <p>Hubungi CS via Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></p>
-  <p>Grup Telegram: <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Grup</a></p>
-</section>
-
-  </div>  <footer>
-    <p>&copy; 2025 Moderen Bicycle</p>
-  </footer>  <!-- Modal Login -->  <div class="login-modal" id="loginModal">
-    <div class="modal-content">
-      <h3>Login</h3>
-      <input type="text" id="loginUsername" placeholder="Username"><br><br>
-      <input type="password" id="loginPassword" placeholder="Password"><br><br>
-      <button onclick="doLogin()">Masuk</button>
-      <button onclick="closeLogin()">Batal</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Moderen Bicycle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#vip">Paket VIP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#referral">Referral</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cs">Customer Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#daftar">Daftar</a></li>
+        </ul>
+      </div>
     </div>
-  </div>  <!-- Modal Daftar -->  <div class="register-modal" id="registerModal">
-    <div class="modal-content">
-      <h3>Daftar</h3>
-      <input type="text" id="regUsername" placeholder="Username"><br><br>
-      <input type="password" id="regPassword" placeholder="Password"><br><br>
-      <button onclick="doRegister()">Daftar</button>
-      <button onclick="closeRegister()">Batal</button>
+  </nav>  <!-- Hero -->  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1>Moderen Bicycle</h1>
+      <p>Investasi Masa Depan dengan Sepeda Listrik</p>
+      <a href="#daftar" class="btn btn-light">Gabung Sekarang</a>
     </div>
-  </div>  <script>
-    function openLogin() {
-      document.getElementById("loginModal").style.display = "flex";
-    }
-    function closeLogin() {
-      document.getElementById("loginModal").style.display = "none";
-    }
-    function openRegister() {
-      document.getElementById("registerModal").style.display = "flex";
-    }
-    function closeRegister() {
-      document.getElementById("registerModal").style.display = "none";
-    }
-
-    function doRegister() {
-      const u = document.getElementById("regUsername").value;
-      const p = document.getElementById("regPassword").value;
-      if (!u || !p) return alert("Isi semua data.");
-      localStorage.setItem("user", JSON.stringify({ username: u, password: p }));
-      alert("Pendaftaran berhasil. Silakan login.");
-      closeRegister();
-    }
-
-    function doLogin() {
-      const u = document.getElementById("loginUsername").value;
-      const p = document.getElementById("loginPassword").value;
-      const user = JSON.parse(localStorage.getItem("user"));
-      if (user && user.username === u && user.password === p) {
-        alert("Login berhasil. Selamat datang " + u);
-        closeLogin();
-      } else {
-        alert("Username atau password salah.");
-      }
-    }
-  </script></body>
+  </header>  <!-- VIP Section -->  <section class="container py-5" id="vip">
+    <h2 class="mb-4">Paket VIP</h2>
+    <div class="row">
+      <!-- VIP Cards -->
+      <script>
+        const vips = [
+          { nama: "VIP Pemula", invest: 75000, profit: 10000, durasi: 15 },
+          { nama: "VIP 1", invest: 100000, profit: 15000, durasi: 20 },
+          { nama: "VIP 2", invest: 200000, profit: 25000, durasi: 20 },
+          { nama: "VIP 3", invest: 300000, profit: 35000, durasi: 20 },
+          { nama: "VIP 4", invest: 500000, profit: 50000, durasi: 20 },
+          { nama: "VIP 5", invest: 750000, profit: 75000, durasi: 20 },
+          { nama: "VIP 6", invest: 1000000, profit: 110000, durasi: 30 },
+          { nama: "VIP 7", invest: 1500000, profit: 160000, durasi: 30 },
+          { nama: "VIP 8", invest: 2000000, profit: 220000, durasi: 30 },
+          { nama: "VIP 9", invest: 3000000, profit: 300000, durasi: 30 },
+          { nama: "VIP 10", invest: 5000000, profit: 500000, durasi: 30 }
+        ];
+      </script>
+      <div id="vip-list" class="row"></div>
+      <script>
+        const vipList = document.getElementById("vip-list");
+        vips.forEach(v => {
+          const total = v.profit * v.durasi;
+          const untung = total - v.invest;
+          vipList.innerHTML += `
+            <div class="col-md-4 vip-card">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">${v.nama}</h5>
+                  <p>Investasi: Rp${v.invest.toLocaleString()}</p>
+                  <p>Profit Harian: Rp${v.profit.toLocaleString()}</p>
+                  <p>Durasi: ${v.durasi} hari</p>
+                  <p>Total Profit: Rp${total.toLocaleString()}</p>
+                  <p>Untung Bersih: Rp${untung.toLocaleString()}</p>
+                </div>
+              </div>
+            </div>`
+        });
+      </script>
+    </div>
+  </section>  <!-- Referral Section -->  <section class="bg-light py-5" id="referral">
+    <div class="container">
+      <h2 class="mb-4">Sistem Referral</h2>
+      <p>Dapatkan bonus dari referral Anda:</p>
+      <ul>
+        <li>Level 1: 20%</li>
+        <li>Level 2: 10%</li>
+        <li>Level 3: 5%</li>
+      </ul>
+    </div>
+  </section>  <!-- Customer Service -->  <section class="container py-5" id="cs">
+    <h2 class="mb-4">Customer Service</h2>
+    <p>Hubungi kami melalui Telegram:</p>
+    <p><strong>CS:</strong> <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></p>
+    <p><strong>Grup Diskusi:</strong> <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Grup Telegram</a></p>
+  </section>  <!-- Tentang Kami -->  <section class="bg-light py-5" id="tentang">
+    <div class="container">
+      <h2 class="mb-4">Tentang Kami</h2>
+      <p>Moderen Bicycle adalah platform investasi sepeda listrik berbasis harian dengan sistem VIP yang transparan. Setiap pengguna dapat memilih tingkat investasi, menerima profit harian, dan menarik saldo kapan saja. Kami juga menyediakan fitur referral dan sistem risiko yang dikontrol oleh admin secara adil dan terbuka.</p>
+    </div>
+  </section>  <!-- Login & Daftar -->  <section class="container py-5" id="login">
+    <h2 class="mb-4">Login</h2>
+    <form>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </section>  <section class="container py-5" id="daftar">
+    <h2 class="mb-4">Daftar</h2>
+    <form>
+      <div class="mb-3">
+        <label for="new-username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="new-username">
+      </div>
+      <div class="mb-3">
+        <label for="new-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="new-password">
+      </div>
+      <div class="mb-3">
+        <label for="ref-code" class="form-label">Kode Referral (opsional)</label>
+        <input type="text" class="form-control" id="ref-code">
+      </div>
+      <button type="submit" class="btn btn-success">Daftar</button>
+    </form>
+  </section>  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Moderen Bicycle. All rights reserved.</p>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></body>
 </html>
