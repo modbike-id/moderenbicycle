@@ -1,92 +1,165 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moderen Bicycle</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moderen Bicycle | Investasi Sepeda Listrik</title>
   <style>
-    /* (CSS tetap sama, tidak diubah) */
-    /* kode CSS kamu disimpan di sini tanpa perubahan */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f3f3;
+    }
+    header {
+      background: #1e88e5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #1565c0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #e3f2fd;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      margin-bottom: 1rem;
+    }
+    .vip-table, .about, .terms {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #64b5f6;
+      color: white;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .cta button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background: #388e3c;
+    }
+    footer {
+      background: #1565c0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Moderen Bicycle</h1>
-    <p>Investasi Sepeda Listrik dengan Sistem VIP & Referral</p>
+    <p>Investasi Sepeda Listrik Modern • Sistem VIP • Risiko Transparan</p>
   </header>
+
   <nav>
-    <a href="#home">Home</a>
     <a href="#vip">VIP</a>
-    <a href="#referral">Referral</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#syarat">S&K</a>
-    <a href="#login">Login</a>
-    <a href="#daftar">Daftar</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#terms">Syarat</a>
+    <a href="#join" onclick="goToLogin()">Gabung Sekarang</a>
   </nav>
-  <section class="hero" id="home">
-    <h1>Gabung Sekarang & Mulai Investasi!</h1>
-    <a href="#daftar" class="btn">Gabung Sekarang</a>
-  </section>
-  <!-- VIP dan lainnya tetap sama -->  <section id="login">
-    <h2>Login</h2>
-    <div class="form-container">
-      <input type="email" id="loginEmail" placeholder="Email">
-      <input type="password" id="loginPassword" placeholder="Password">
-      <button onclick="loginUser()">Login</button>
+
+  <div class="hero">
+    <h1>Gabung Investasi Sekarang</h1>
+    <p>Mulai dari Rp75.000 • Profit Harian Otomatis</p>
+    <div class="cta" id="join">
+      <button onclick="goToLogin()">Gabung Sekarang</button>
     </div>
-  </section>  <section id="daftar">
-    <h2>Daftar</h2>
-    <div class="form-container">
-      <input type="text" id="namaLengkap" placeholder="Nama Lengkap">
-      <input type="email" id="registerEmail" placeholder="Email">
-      <input type="text" id="referral" placeholder="Kode Referral (opsional)">
-      <input type="password" id="registerPassword" placeholder="Password">
-      <button onclick="registerUser()">Daftar</button>
-    </div>
-  </section>  <footer>
-    <p>CS Telegram: <a href="https://t.me/Moderenbicycle" style="color: white; text-decoration: underline">@Moderenbicycle</a></p>
-    <p>Grup Telegram: <a href="https://t.me/+SBBD5EefTGBhMzBl" style="color: white; text-decoration: underline">Gabung Grup</a></p>
-    <p>&copy; 2025 Moderen Bicycle</p>
-  </footer>  <!-- Firebase SDK -->  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  </div>
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyBKzSJeJiC5WwuFJTboxCU0NhfWtjUH51E",
-      authDomain: "moderen-bicycle.firebaseapp.com",
-      projectId: "moderen-bicycle",
-      storageBucket: "moderen-bicycle.firebasestorage.app",
-      messagingSenderId: "887884119140",
-      appId: "1:887884119140:web:582de2cba83b6e7d31b371",
-      measurementId: "G-4HHH0C699K"
-    };
+  <div class="vip-table" id="vip">
+    <h2>Paket VIP</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>VIP</th>
+          <th>Investasi</th>
+          <th>Profit / Hari</th>
+          <th>Durasi</th>
+          <th>Total Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Pemula</td><td>Rp75.000</td><td>Rp10.000</td><td>15 Hari</td><td>Rp150.000</td></tr>
+        <tr><td>VIP 1</td><td>Rp100.000</td><td>Rp15.000</td><td>20 Hari</td><td>Rp300.000</td></tr>
+        <tr><td>VIP 2</td><td>Rp200.000</td><td>Rp25.000</td><td>20 Hari</td><td>Rp500.000</td></tr>
+        <tr><td>VIP 3</td><td>Rp300.000</td><td>Rp35.000</td><td>20 Hari</td><td>Rp700.000</td></tr>
+        <tr><td>VIP 4</td><td>Rp500.000</td><td>Rp50.000</td><td>20 Hari</td><td>Rp1.000.000</td></tr>
+        <tr><td>VIP 5</td><td>Rp750.000</td><td>Rp75.000</td><td>20 Hari</td><td>Rp1.500.000</td></tr>
+        <tr><td>VIP 6</td><td>Rp1.000.000</td><td>Rp110.000</td><td>30 Hari</td><td>Rp3.300.000</td></tr>
+        <tr><td>VIP 7</td><td>Rp1.500.000</td><td>Rp160.000</td><td>30 Hari</td><td>Rp4.800.000</td></tr>
+        <tr><td>VIP 8</td><td>Rp2.000.000</td><td>Rp220.000</td><td>30 Hari</td><td>Rp6.600.000</td></tr>
+        <tr><td>VIP 9</td><td>Rp3.000.000</td><td>Rp300.000</td><td>30 Hari</td><td>Rp9.000.000</td></tr>
+        <tr><td>VIP 10</td><td>Rp5.000.000</td><td>Rp500.000</td><td>30 Hari</td><td>Rp15.000.000</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+  <div class="about" id="about">
+    <h2>Tentang Kami</h2>
+    <p>Moderen Bicycle adalah platform investasi sepeda listrik yang mengutamakan transparansi, risiko terukur, dan keuntungan harian. Sistem kami mencakup 11 level VIP, fitur referral bertingkat, bonus harian, dan kontrol risiko manual oleh admin. Kami hanya menerima QRIS dan memberikan layanan customer service melalui Telegram.</p>
+  </div>
 
-    // Daftar user
-    window.registerUser = () => {
-      const email = document.getElementById("registerEmail").value;
-      const password = document.getElementById("registerPassword").value;
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Pendaftaran berhasil! Silakan login.");
-        })
-        .catch((error) => {
-          alert("Gagal daftar: " + error.message);
-        });
-    };
+  <div class="terms" id="terms">
+    <h2>Syarat & Ketentuan</h2>
+    <ul>
+      <li>Minimum investasi Rp75.000</li>
+      <li>Profit harian otomatis</li>
+      <li>Withdraw minimum Rp50.000 (fee 10%)</li>
+      <li>Sistem risiko ditentukan admin (5–90%)</li>
+      <li>Referral: 20% (L1), 10% (L2), 5% (L3)</li>
+      <li>CS Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></li>
+      <li>Grup Info: <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Telegram</a></li>
+    </ul>
+  </div>
 
-    // Login user
-    window.loginUser = () => {
-      const email = document.getElementById("loginEmail").value;
-      const password = document.getElementById("loginPassword").value;
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Login berhasil! Selamat datang.");
-        })
-        .catch((error) => {
-          alert("Login gagal: " + error.message);
-        });
-    };
-  </script></body>
-</html>
+  <footer>
+    &copy; 2025 Moderen Bicycle. All rights reserved.
+  </footer>
+
+  <script>
+    function goToLogin() {
+      window.location.href = "./login.html";
+    }
+  </script>
+
+</body>
+                      </html>
