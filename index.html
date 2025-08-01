@@ -3,163 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moderen Bicycle | Investasi Sepeda Listrik</title>
+  <title>Moderen Bicycle - Investasi Sepeda Listrik</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #f3f3f3;
+      background-color: #f5f5f5;
     }
-    header {
-      background: #1e88e5;
+    header, footer {
+      background-color: #2c3e50;
       color: white;
       padding: 1rem;
       text-align: center;
     }
     nav {
-      background: #1565c0;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
+      background-color: #34495e;
+      padding: 0.5rem;
+      text-align: center;
     }
     nav a {
       color: white;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
-    .hero {
-      background: #e3f2fd;
-      text-align: center;
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
       padding: 2rem;
-    }
-    .hero h1 {
-      margin-bottom: 1rem;
-    }
-    .vip-table, .about, .terms {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
+      background: white;
     }
     th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
+      border: 1px solid #ccc;
+      padding: 0.7rem;
       text-align: center;
     }
     th {
-      background: #64b5f6;
+      background-color: #2c3e50;
       color: white;
     }
     .cta {
-      display: flex;
-      justify-content: center;
-      margin: 2rem;
-    }
-    .cta button {
-      background: #43a047;
-      color: white;
-      border: none;
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .cta button:hover {
-      background: #388e3c;
-    }
-    footer {
-      background: #1565c0;
+      background-color: #27ae60;
       color: white;
-      text-align: center;
-      padding: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+    .cta:hover {
+      background-color: #219150;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer small {
+      display: block;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Moderen Bicycle</h1>
-    <p>Investasi Sepeda Listrik Modern • Sistem VIP • Risiko Transparan</p>
+    <p>Investasi Sepeda Listrik Menguntungkan</p>
   </header>
 
   <nav>
-    <a href="#vip">VIP</a>
-    <a href="#about">Tentang Kami</a>
-    <a href="#terms">Syarat</a>
-    <a href="#join" onclick="goToLogin()">Gabung Sekarang</a>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#syarat">Syarat & Ketentuan</a>
+    <a href="#kontak">Kontak</a>
   </nav>
 
-  <div class="hero">
-    <h1>Gabung Investasi Sekarang</h1>
-    <p>Mulai dari Rp75.000 • Profit Harian Otomatis</p>
-    <div class="cta" id="join">
-      <button onclick="goToLogin()">Gabung Sekarang</button>
-    </div>
-  </div>
+  <div class="container">
+    <section id="beranda">
+      <h2>Daftar Paket VIP</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>VIP</th>
+            <th>Investasi</th>
+            <th>Profit Harian</th>
+            <th>Durasi</th>
+            <th>Total Profit</th>
+            <th>Untung Bersih</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>VIP Pemula</td><td>Rp75.000</td><td>Rp10.000</td><td>15 hari</td><td>Rp150.000</td><td>Rp75.000</td></tr>
+          <tr><td>VIP 1</td><td>Rp100.000</td><td>Rp15.000</td><td>20 hari</td><td>Rp300.000</td><td>Rp200.000</td></tr>
+          <tr><td>VIP 2</td><td>Rp200.000</td><td>Rp25.000</td><td>20 hari</td><td>Rp500.000</td><td>Rp300.000</td></tr>
+          <tr><td>VIP 3</td><td>Rp300.000</td><td>Rp35.000</td><td>20 hari</td><td>Rp700.000</td><td>Rp400.000</td></tr>
+          <tr><td>VIP 4</td><td>Rp500.000</td><td>Rp50.000</td><td>20 hari</td><td>Rp1.000.000</td><td>Rp500.000</td></tr>
+          <tr><td>VIP 5</td><td>Rp750.000</td><td>Rp75.000</td><td>20 hari</td><td>Rp1.500.000</td><td>Rp750.000</td></tr>
+          <tr><td>VIP 6</td><td>Rp1.000.000</td><td>Rp110.000</td><td>30 hari</td><td>Rp3.300.000</td><td>Rp2.300.000</td></tr>
+          <tr><td>VIP 7</td><td>Rp1.500.000</td><td>Rp160.000</td><td>30 hari</td><td>Rp4.800.000</td><td>Rp3.300.000</td></tr>
+          <tr><td>VIP 8</td><td>Rp2.000.000</td><td>Rp220.000</td><td>30 hari</td><td>Rp6.600.000</td><td>Rp4.600.000</td></tr>
+          <tr><td>VIP 9</td><td>Rp3.000.000</td><td>Rp300.000</td><td>30 hari</td><td>Rp9.000.000</td><td>Rp6.000.000</td></tr>
+          <tr><td>VIP 10</td><td>Rp5.000.000</td><td>Rp500.000</td><td>30 hari</td><td>Rp15.000.000</td><td>Rp10.000.000</td></tr>
+        </tbody>
+      </table>
+      <a class="cta" href="/login">Gabung Sekarang</a>
+    </section>
 
-  <div class="vip-table" id="vip">
-    <h2>Paket VIP</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>VIP</th>
-          <th>Investasi</th>
-          <th>Profit / Hari</th>
-          <th>Durasi</th>
-          <th>Total Profit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Pemula</td><td>Rp75.000</td><td>Rp10.000</td><td>15 Hari</td><td>Rp150.000</td></tr>
-        <tr><td>VIP 1</td><td>Rp100.000</td><td>Rp15.000</td><td>20 Hari</td><td>Rp300.000</td></tr>
-        <tr><td>VIP 2</td><td>Rp200.000</td><td>Rp25.000</td><td>20 Hari</td><td>Rp500.000</td></tr>
-        <tr><td>VIP 3</td><td>Rp300.000</td><td>Rp35.000</td><td>20 Hari</td><td>Rp700.000</td></tr>
-        <tr><td>VIP 4</td><td>Rp500.000</td><td>Rp50.000</td><td>20 Hari</td><td>Rp1.000.000</td></tr>
-        <tr><td>VIP 5</td><td>Rp750.000</td><td>Rp75.000</td><td>20 Hari</td><td>Rp1.500.000</td></tr>
-        <tr><td>VIP 6</td><td>Rp1.000.000</td><td>Rp110.000</td><td>30 Hari</td><td>Rp3.300.000</td></tr>
-        <tr><td>VIP 7</td><td>Rp1.500.000</td><td>Rp160.000</td><td>30 Hari</td><td>Rp4.800.000</td></tr>
-        <tr><td>VIP 8</td><td>Rp2.000.000</td><td>Rp220.000</td><td>30 Hari</td><td>Rp6.600.000</td></tr>
-        <tr><td>VIP 9</td><td>Rp3.000.000</td><td>Rp300.000</td><td>30 Hari</td><td>Rp9.000.000</td></tr>
-        <tr><td>VIP 10</td><td>Rp5.000.000</td><td>Rp500.000</td><td>30 Hari</td><td>Rp15.000.000</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>
+        Moderen Bicycle adalah platform investasi berbasis proyek sepeda listrik. Kami menyediakan berbagai level VIP mulai dari Pemula hingga VIP 10. 
+        Sistem kami transparan dan memberi pilihan tingkat risiko sesuai keinginan pengguna. Semua profit harian bisa ditarik kapan saja selama memenuhi 
+        minimum dan fee penarikan.
+      </p>
+    </section>
 
-  <div class="about" id="about">
-    <h2>Tentang Kami</h2>
-    <p>Moderen Bicycle adalah platform investasi sepeda listrik yang mengutamakan transparansi, risiko terukur, dan keuntungan harian. Sistem kami mencakup 11 level VIP, fitur referral bertingkat, bonus harian, dan kontrol risiko manual oleh admin. Kami hanya menerima QRIS dan memberikan layanan customer service melalui Telegram.</p>
-  </div>
+    <section id="syarat">
+      <h2>Syarat & Ketentuan</h2>
+      <p>
+        1. Minimum penarikan Rp50.000 dengan fee 10%<br/>
+        2. Dana tidak di-lock, bisa ditarik kapan saja sesuai saldo<br/>
+        3. Risiko kerugian dapat diberikan oleh admin dengan persentase tertentu<br/>
+        4. Semua transaksi disimpan dalam riwayat pengguna<br/>
+        5. Sistem referral 3 level: 20%, 10%, 5%
+      </p>
+    </section>
 
-  <div class="terms" id="terms">
-    <h2>Syarat & Ketentuan</h2>
-    <ul>
-      <li>Minimum investasi Rp75.000</li>
-      <li>Profit harian otomatis</li>
-      <li>Withdraw minimum Rp50.000 (fee 10%)</li>
-      <li>Sistem risiko ditentukan admin (5–90%)</li>
-      <li>Referral: 20% (L1), 10% (L2), 5% (L3)</li>
-      <li>CS Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></li>
-      <li>Grup Info: <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Telegram</a></li>
-    </ul>
+    <section id="kontak">
+      <h2>Hubungi Kami</h2>
+      <p>CS Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></p>
+      <p>Grup: <a href="https://t.me/+SBBD5EefTGBhMzBl" target="_blank">Gabung Grup Telegram</a></p>
+    </section>
   </div>
 
   <footer>
-    &copy; 2025 Moderen Bicycle. All rights reserved.
+    <p>© 2025 Moderen Bicycle</p>
+    <small>Investasi mengandung risiko. Harap pertimbangkan dengan matang.</small>
   </footer>
-
-  <script>
-    function goToLogin() {
-      window.location.href = "./login.html";
-    }
-  </script>
-
 </body>
-                      </html>
+</html>
