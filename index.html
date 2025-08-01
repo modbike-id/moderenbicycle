@@ -1,54 +1,149 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moderen Bicycle</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      padding: 2rem;
+      text-align: center;
+      background: #ecf0f1;
+    }
+    .hero h1 {
+      margin-bottom: 0.5rem;
+    }
+    .vip-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      border-collapse: collapse;
+    }
+    .vip-table th, .vip-table td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .vip-table th {
+      background: #2980b9;
+      color: white;
+    }
+    .cta {
+      text-align: center;
+      margin: 2rem;
+    }
+    .cta a {
+      background: #27ae60;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Moderen Bicycle</h1>
-    <nav>
-      <ul>
-        <li><a href="#vip">Paket VIP</a></li>
-        <li><a href="#tentang">Tentang Kami</a></li>
-        <li><a href="#syarat">Syarat & Ketentuan</a></li>
-        <li><a href="#gabung">Gabung Sekarang</a></li>
-      </ul>
-    </nav>
-  </header>  <section id="hero">
-    <h2>Investasi Sepeda Listrik Mulai Rp75.000</h2>
-    <p>Dapatkan profit harian, sistem referral, dan fitur menarik lainnya!</p>
-    <a href="#login" class="button">Gabung Sekarang</a>
-  </section>  <section id="vip">
-    <h2>Paket VIP</h2>
-    <table>
-      <tr><th>Paket</th><th>Investasi</th><th>Profit Harian</th><th>Durasi</th><th>Total Profit</th><th>Untung Bersih</th></tr>
-      <tr><td>VIP Pemula</td><td>Rp75.000</td><td>Rp10.000</td><td>15 hari</td><td>Rp150.000</td><td>Rp75.000</td></tr>
-      <tr><td>VIP 1</td><td>Rp100.000</td><td>Rp15.000</td><td>20 hari</td><td>Rp300.000</td><td>Rp200.000</td></tr>
-      <tr><td>VIP 2</td><td>Rp200.000</td><td>Rp25.000</td><td>20 hari</td><td>Rp500.000</td><td>Rp300.000</td></tr>
-      <tr><td>VIP 3</td><td>Rp300.000</td><td>Rp35.000</td><td>20 hari</td><td>Rp700.000</td><td>Rp400.000</td></tr>
-      <tr><td>VIP 4</td><td>Rp500.000</td><td>Rp50.000</td><td>20 hari</td><td>Rp1.000.000</td><td>Rp500.000</td></tr>
-      <tr><td>VIP 5</td><td>Rp750.000</td><td>Rp75.000</td><td>20 hari</td><td>Rp1.500.000</td><td>Rp750.000</td></tr>
-      <tr><td>VIP 6</td><td>Rp1.000.000</td><td>Rp110.000</td><td>30 hari</td><td>Rp3.300.000</td><td>Rp2.300.000</td></tr>
-      <tr><td>VIP 7</td><td>Rp1.500.000</td><td>Rp160.000</td><td>30 hari</td><td>Rp4.800.000</td><td>Rp3.300.000</td></tr>
-      <tr><td>VIP 8</td><td>Rp2.000.000</td><td>Rp220.000</td><td>30 hari</td><td>Rp6.600.000</td><td>Rp4.600.000</td></tr>
-      <tr><td>VIP 9</td><td>Rp3.000.000</td><td>Rp300.000</td><td>30 hari</td><td>Rp9.000.000</td><td>Rp6.000.000</td></tr>
-      <tr><td>VIP 10</td><td>Rp5.000.000</td><td>Rp500.000</td><td>30 hari</td><td>Rp15.000.000</td><td>Rp10.000.000</td></tr>
-    </table>
-  </section>  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>Moderen Bicycle adalah platform investasi berbasis proyek sepeda listrik di Indonesia. Kami menawarkan sistem VIP, referral, dan fitur transparansi kerugian untuk memberikan pengalaman adil dan menguntungkan bagi semua pengguna.</p>
-  </section>  <section id="syarat">
-    <h2>Syarat & Ketentuan</h2>
-    <p>Minimum investasi Rp75.000. Minimum penarikan Rp50.000 dengan fee 10%. Risiko kerugian dapat diatur oleh admin dari 5% hingga 90% dan akan ditandai dengan warna merah pada proyek pengguna. Dana tidak dikunci dan dapat ditarik kapan saja setelah mencapai batas minimum.</p>
-  </section>  <section id="gabung">
-    <h2>Gabung Sekarang</h2>
-    <p>Silakan login atau daftar akun Anda untuk mulai berinvestasi.</p>
-    <a href="login.html" class="button">Login / Daftar</a>
-  </section>  <footer>
-    <p>Hubungi CS via Telegram: <a href="https://t.me/Moderenbicycle">@Moderenbicycle</a></p>
-    <p><a href="https://t.me/+SBBD5EefTGBhMzBl">Grup Telegram Resmi</a></p>
-  </footer>
+
+<header>
+  <h1>Moderen Bicycle</h1>
+  <p>Investasi Sepeda Listrik | Aman, Cepat, Menguntungkan</p>
+</header>
+
+<nav>
+  <a href="#vip">Paket VIP</a>
+  <a href="#tentang">Tentang Kami</a>
+  <a href="#syarat">Syarat & Ketentuan</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Daftar</a>
+</nav>
+
+<div class="hero">
+  <h1>Gabung Bersama Kami</h1>
+  <p>Dapatkan profit harian dari proyek sepeda listrik!</p>
+  <div class="cta">
+    <a href="register.html">Gabung Sekarang</a>
+  </div>
+</div>
+
+<section id="vip">
+  <h2 style="text-align:center">Paket VIP</h2>
+  <table class="vip-table">
+    <tr>
+      <th>Paket</th>
+      <th>Investasi</th>
+      <th>Profit Harian</th>
+      <th>Durasi</th>
+      <th>Total Profit</th>
+      <th>Untung Bersih</th>
+    </tr>
+    <tr><td>VIP Pemula</td><td>Rp75.000</td><td>Rp10.000</td><td>15 hari</td><td>Rp150.000</td><td>Rp75.000</td></tr>
+    <tr><td>VIP 1</td><td>Rp100.000</td><td>Rp15.000</td><td>20 hari</td><td>Rp300.000</td><td>Rp200.000</td></tr>
+    <tr><td>VIP 2</td><td>Rp200.000</td><td>Rp25.000</td><td>20 hari</td><td>Rp500.000</td><td>Rp300.000</td></tr>
+    <tr><td>VIP 3</td><td>Rp300.000</td><td>Rp35.000</td><td>20 hari</td><td>Rp700.000</td><td>Rp400.000</td></tr>
+    <tr><td>VIP 4</td><td>Rp500.000</td><td>Rp50.000</td><td>20 hari</td><td>Rp1.000.000</td><td>Rp500.000</td></tr>
+    <tr><td>VIP 5</td><td>Rp750.000</td><td>Rp75.000</td><td>20 hari</td><td>Rp1.500.000</td><td>Rp750.000</td></tr>
+    <tr><td>VIP 6</td><td>Rp1.000.000</td><td>Rp110.000</td><td>30 hari</td><td>Rp3.300.000</td><td>Rp2.300.000</td></tr>
+    <tr><td>VIP 7</td><td>Rp1.500.000</td><td>Rp160.000</td><td>30 hari</td><td>Rp4.800.000</td><td>Rp3.300.000</td></tr>
+    <tr><td>VIP 8</td><td>Rp2.000.000</td><td>Rp220.000</td><td>30 hari</td><td>Rp6.600.000</td><td>Rp4.600.000</td></tr>
+    <tr><td>VIP 9</td><td>Rp3.000.000</td><td>Rp300.000</td><td>30 hari</td><td>Rp9.000.000</td><td>Rp6.000.000</td></tr>
+    <tr><td>VIP 10</td><td>Rp5.000.000</td><td>Rp500.000</td><td>30 hari</td><td>Rp15.000.000</td><td>Rp10.000.000</td></tr>
+  </table>
+</section>
+
+<section id="tentang" style="padding:2rem; background:#fff;">
+  <h2 style="text-align:center">Tentang Kami</h2>
+  <p style="max-width:800px; margin: auto;">
+    Moderen Bicycle adalah platform investasi digital berbasis proyek sepeda listrik. Kami menyediakan berbagai paket VIP
+    dengan profit harian dan sistem transparan. Risiko kerugian bisa terjadi, tergantung tingkat risiko yang ditentukan admin.
+    Dana tidak dikunci dan pengguna bisa menarik kapan saja (minimal Rp50.000, fee 10%). Referral tersedia hingga 3 level.
+    CS aktif via Telegram untuk bantuan real-time.
+  </p>
+</section>
+
+<section id="syarat" style="padding:2rem; background:#ecf0f1;">
+  <h2 style="text-align:center">Syarat & Ketentuan</h2>
+  <ul style="max-width:800px; margin:auto;">
+    <li>Investasi minimal Rp75.000 (VIP Pemula).</li>
+    <li>Profit harian otomatis masuk saldo.</li>
+    <li>Withdraw minimal Rp50.000 (fee 10%).</li>
+    <li>Risiko kerugian bisa ditentukan oleh admin (hingga 90%).</li>
+    <li>Sistem transparan dan adil.</li>
+    <li>CS via Telegram: <a href="https://t.me/Moderenbicycle" target="_blank">@Moderenbicycle</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Moderen Bicycle</p>
+  <p><a href="https://t.me/+SBBD5EefTGBhMzBl" style="color:#fff;">Gabung Grup Telegram</a></p>
+</footer>
+
 </body>
 </html>
